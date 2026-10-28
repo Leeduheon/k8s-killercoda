@@ -35,8 +35,11 @@ if [ ! -d ~/k8s-killercoda ]; then
   git clone https://github.com/Leeduheon/k8s-killercoda.git ~/k8s-killercoda
 fi
 
+# 6. 마스터 노드(controlplane)에도 파드가 배치되도록 NoSchedule 테인트 자동 해제
+kubectl taint nodes controlplane node-role.kubernetes.io/control-plane:NoSchedule- 2>/dev/null || true
+
 source ~/.bashrc
 cd ~/k8s-killercoda/ttabaeku 2>/dev/null || cd ~/k8s-killercoda
 clear
-echo "✅ 쿠버네티스 기본 설정(k, Tab 자동완성, vimrc) 및 따배쿠 예제 다운로드 완료!"
+echo "✅ 쿠버네티스 기본 설정(k, Tab 자동완성, vimrc, 마스터노드 스케줄링 허용) 및 따배쿠 예제 다운로드 완료!"
 kubectl get nodes
