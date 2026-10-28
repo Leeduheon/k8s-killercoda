@@ -8,9 +8,9 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
-    "backend": {
-      "imageid": "kubernetes-kubeadm-2nodes"
-    }
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
   }
 }
