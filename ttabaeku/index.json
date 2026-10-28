@@ -1,0 +1,16 @@
+{
+  "title": "따배쿠 쿠버네티스 실습 환경 (자동 세팅)",
+  "description": "k 명령어, Tab 자동완성, 따배쿠 예제 git clone이 자동 적용된 2노드 클러스터",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "init.sh"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "backend": {
+      "imageid": "kubernetes-kubeadm-2nodes"
+    }
+  }
+}
