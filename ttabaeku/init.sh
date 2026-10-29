@@ -6,7 +6,8 @@ source <(kubectl completion bash)
 alias k=kubectl
 complete -o default -F __start_kubectl k
 
-# 2. 자주 쓰는 조회/생성/즉시삭제 단축 설정
+# 2. 자주 쓰는 조회/생성/즉시삭제 단축 설정 + watch 단축어 연동(뒤에 공백 필수!)
+alias watch='watch '
 alias kgp='kubectl get pods -o wide'
 alias kgn='kubectl get nodes -o wide'
 alias kgs='kubectl get svc -o wide'
@@ -41,5 +42,5 @@ kubectl taint nodes controlplane node-role.kubernetes.io/control-plane:NoSchedul
 source ~/.bashrc
 cd ~/k8s-killercoda/ttabaeku 2>/dev/null || cd ~/k8s-killercoda
 clear
-echo "✅ 쿠버네티스 기본 설정(k, Tab 자동완성, vimrc, 마스터노드 스케줄링 허용) 및 따배쿠 예제 다운로드 완료!"
+echo "✅ 쿠버네티스 기본 설정(k, watch, Tab 자동완성, vimrc, 마스터노드 스케줄링 허용) 및 따배쿠 예제 다운로드 완료!"
 kubectl get nodes
